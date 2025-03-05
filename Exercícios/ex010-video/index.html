@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens Flexíveis</title>
+    <style>
+        body{
+            background-color: cadetblue;
+        }
+        
+    </style>
+</head>
+<body>
+    <p>Tente abrir essa imagem em dispositivos diferentes ou simplismente aumente o seu navegador</p>
+
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png"> <!--Essa tag permite que a foto se adeque ao tamanho do dispositivo.-->
+        <img src="imagens/foto-g.png" alt="Foto flexível">
+    </picture>
+    <h1>Reproduzindo áudios</h1>
+    <p>Aprendendo a colocar áudio no site</p>
+    <audio preload="metadata" controls loop src="midia/Kiss The Heavens - Asher Fulero.mp3" ></audio> <!--Para ser compatível com qualquer navegador, pode ser 3 formatos: MP3, WAV e 0GG-->
+
+<p>Outro jeito de colocar áudio</p>
+    <audio>
+      <source src="midia/Kiss The Heavens - Asher Fulero.mp3"type="audio/mpeg"> controls
+    </audio> <!--Isso serve para quando o navegador não é compatível com o formato MP3, dessa forma o type poderia ser WAV ou 0GG(para isso eu precisaria converter o arquivo de MP3 para qualquer um desses)-->
+    <!--caso não carregue, pode-se inserir a opção dowload -->
+
+<p>Infelizmente seu navegador não ´pode reproduzir áudios</p>
+<a href="midia/Kiss The Heavens - Asher Fulero.mp3">Clique aqui para baixar o arquivo</a>
+
+<h1>Colocando vídeos</h1>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AB-3rsAu7A4?si=GqF6agMHamG7IRz4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<p>Outra forma</p>
+<video width="300px" controls poster="imagens/foto-g.png" src="midia/pexels-cottonbro-7181824 (2160p).mp4"></video> <!--Aqui eu coloquei tanto um vídeo quanto uma foto de capa que aparece até que o vídeo seja iniciado-->
+</body>
+</html>
